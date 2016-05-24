@@ -1,0 +1,23 @@
+ 
+- lancer SITL :
+la commande c'est dronekit-sitl avec des parametres telqus le type de drone coptrer et coordonné gps de démarage
+dronekit-sitl copter --home=48.1234622,-1.6426367000000255,584,353
+
+
+- lancer un mavproxy : on peut se connecter au proxy via les ports apres --out (14550 par exemple)
+mavproxy.py --master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551 --map --console
+
+
+- Pour lancer plusieur un drone suplementaire (port du deuxieme sera 5770 +10)
+dronekit-sitl copter --home=48.1234633,-1.6426367000000266,584,353 --instance 1
+
+- pour voir la derniere coordonnées sur le serveur pour le drone d'id=57231955667fa70100c490d8 : 
+http://projetm2gla.istic.univ-rennes1.fr:12349/api/Drones/57231955667fa70100c490d8
+
+- pour script phython et fichier kml :
+https://developers.google.com/kml/documentation/kml_tut#styles-for-geometry
+
+
+
+
+
